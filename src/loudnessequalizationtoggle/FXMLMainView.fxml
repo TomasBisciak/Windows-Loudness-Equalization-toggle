@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="256.0" prefWidth="458.0" style="-fx-background-color: #2c3e50;" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="loudnessequalizationtoggle.FXMLMainViewController">
+   <center>
+      <BorderPane prefHeight="135.0" prefWidth="225.0" BorderPane.alignment="CENTER">
+         <center>
+            <VBox alignment="CENTER" prefHeight="261.0" prefWidth="458.0" spacing="5.0">
+               <children>
+                  <HBox alignment="CENTER">
+                     <VBox.margin>
+                        <Insets bottom="3.0" top="3.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label fx:id="lblActivity" prefHeight="19.0" prefWidth="216.0" style="-fx-background-color: #2980b9; -fx-background-radius: 10;" text="Loudness Equalization : Active" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+                    <Button fx:id="btnToTray" onAction="#toTray" prefHeight="25.0" prefWidth="236.0" style="-fx-background-radius: 0; -fx-background-color: #8e44ad;" text="Hide to System tray" textFill="#ecf0f1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <HBox alignment="CENTER" spacing="5.0">
+                     <children>
+                        <Label text="Toggle key" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtFieldDetect" editable="false" prefHeight="25.0" prefWidth="103.0" promptText="Toggle key code" />
+                        <Button fx:id="btnDetect" mnemonicParsing="false" onAction="#detect" text="Detect" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <CheckBox fx:id="chckBoxDSW" mnemonicParsing="false" text="Dont show this window next time." textFill="#ecf0f1">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </CheckBox>
+                  <Label text="(Checking this will not show this window again" textFill="#ecf0f1" />
+                  <Label layoutX="31.0" layoutY="110.0" text=", you can open this window from System Tray in case you need it)" textFill="#ecf0f1" />
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </center>
+   <top>
+        <Label fx:id="label" minHeight="16" minWidth="69" text="Loudness Equalization Toggle" textFill="#ecf0f1" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets top="20.0" />
+         </BorderPane.margin>
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+   </top>
+   <bottom>
+      <Label text="Tomas Bisciak " textFill="WHITE" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="5.0" />
+         </BorderPane.margin>
+      </Label>
+   </bottom>
+</BorderPane>
